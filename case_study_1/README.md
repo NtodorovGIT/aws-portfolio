@@ -1,8 +1,8 @@
-# Apache Web Server Setup
+# Apache Web Service Setup
 
-This project deploys a fully functional VPC with three subnets - two public and one private which are placed web server into an autoscaling group, on which the Apache web service is installed.
+This project deploys a fully functional Apache web service. 
 
-The access to the web server is allowed only by AWS system manager or SSH from the Bastion host.
+The access to the web server is allowed only by AWS System Manager or SSH from a Bastion host.
 
 Access from the Internet to the web server is possible only through the application load balancer which listens for HTTP traffic.
 
@@ -11,8 +11,9 @@ Supported features of the project:
 * Auto-scaling 
 * Server health checks
 * ALB for traffic routing
-* SSM connection 
+* SSM connection
 * Dynamic fetching from S3 of the configuration file.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
