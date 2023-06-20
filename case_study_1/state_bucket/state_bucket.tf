@@ -4,12 +4,6 @@ resource "aws_s3_bucket" "state_s3_bucket" {
     prevent_destroy = "false"
   }
 }
-resource "aws_s3_bucket_versioning" "s3-version" {
-  bucket = aws_s3_bucket.state_s3_bucket.id
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
 
 resource "aws_s3_bucket_acl" "s3_acl" {
   bucket = aws_s3_bucket.state_s3_bucket.id

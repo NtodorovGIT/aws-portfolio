@@ -1,8 +1,8 @@
-# Improving Apache Web Server infrastructure code
+# Improving Apache Web Service Infrastructure Code
 
-The second project is to improve the infrastructure code of the Apache web server by using modules concept, build-in function, locals, and expression.
+The second project is to improve the infrastructure code of the Apache Web Service by using modules concept, build-in function, locals, and expression.
 
-For this purpose, the infrastructure is divided into two modules [application]() and [network]() to become more reusable,and a `for` expression was used to obtain the output values of the modules.
+For this purpose, the infrastructure is divided into two modules [application]() and [network]() to become more reusable.
 
 This infrastructure supports the same functionality as the first project, but in addition is added a DynamoDB table for locking the `state.tf` file.
 
@@ -27,8 +27,8 @@ module "application" {
 }
 ```
 ## Code improvements
-*  removing hard coded values 
-* adding description in the resource block
+*  Removing hard coded values 
+*  Adding description for all variables
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
