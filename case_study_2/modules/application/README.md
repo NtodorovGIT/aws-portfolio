@@ -1,32 +1,22 @@
-The information includes in this README is about deploying an application module.
+## Summary 
 
-This module installs Apache server in to autoscaling group behind application load balancer.
+This README is about deploying an application module.
+
+This module installs Apache Web Server in an autoscaling group behind an application load balancer.
 
 ## Usage
-
-To use the application module, you will need to include it with `module block` in your module invocation, and connected with the network module in your configuration.
-
-The `variables.tf` included in the module only gives the references from the network module and makes connection between the two modules.
 
 The `module block` should look like this:
 
 ```hcl
-module "application" {
-  
-source               = "./modules/application"
- 
- vpc_id               = module.network.vpc_id
- 
- nat_gw_vpc           = module.network.nat_gw_vpc
- 
- private_sg_id        = module.network.security_group_id[1]
- 
- public_sg_id         = module.network.security_group_id[0]
- 
- private_subnet_id    = module.network.subnet_id[0]
-
+module "application" { 
+  source               = "./modules/application"
+  vpc_id               = module.network.vpc_id
+  nat_gw_vpc           = module.network.nat_gw_vpc
+  private_sg_id        = module.network.security_group_id[1]
+  public_sg_id         = module.network.security_group_id[0]
+  private_subnet_id    = module.network.subnet_id[0]
   public_subnet_id     = module.network.subnet_id[1]
-
   public_alb_subnet_id = module.network.subnet_id[0]
 }
 ```
