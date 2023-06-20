@@ -1,17 +1,17 @@
-This README contains information about deployment of the network module used in this case study
+## Summary
+
+This README is about deploying a network module.
 
 ## Usage
 
-To call this module, you need to include it in the `module block` in your configuration and give the path to the directory in which the module is in.
-
 The `module block` should look like this:
+
 ```hcl
 module "network"{
  
  source = "./modules/network"
 }
 ```
-To use the module with your values, you need to change the default values in `variables.tf` with the ones that you need.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
