@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "state_s3_bucket" {
-  bucket = "state-file-bucket-ntjgf"
+  bucket = "state-file-bucket-ntproject"
   lifecycle {
     prevent_destroy = "false"
   }

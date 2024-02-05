@@ -1,5 +1,0 @@
-#!/bin/bash
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-aws s3 cp s3://html-file-bucket-case2nt/case-study-html/index.html --region eu-south-1  /var/www/html/index.html
