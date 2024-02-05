@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "html_s3_bucket" {
-  bucket = "html-file-bucket-case2nt"
+  bucket = "html-file-bucket-project2nt"
   lifecycle {
     prevent_destroy = "false"
   }
